@@ -7,12 +7,12 @@
 Summary:	Perl Cairo bindings
 Summary(pl):	Wi±zania Cairo dla Perla
 Name:		perl-Cairo
-Version:	0.92
+Version:	1.00
 Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	9fb19613397b49c2aad8049b0d7a0b21
+# Source0-md5:	60ec93dbe00c9dcefcfb22ca913c237a
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	cairo-devel >= 1.2.4
 BuildRequires:	perl-ExtUtils-Depends >= 0.201
@@ -42,10 +42,9 @@ Ten modu³ daje dostêp z poziomu Perla do biblioteki Cairo.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Cairo/.packlist
 
 %clean
