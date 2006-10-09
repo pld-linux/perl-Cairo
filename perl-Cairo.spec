@@ -7,12 +7,12 @@
 Summary:	Perl Cairo bindings
 Summary(pl):	Wi±zania Cairo dla Perla
 Name:		perl-Cairo
-Version:	1.00
+Version:	1.01
 Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	60ec93dbe00c9dcefcfb22ca913c237a
+# Source0-md5:	d2c6641f1bc33834ea695ff56919c142
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	cairo-devel >= 1.2.4
 BuildRequires:	perl-ExtUtils-Depends >= 0.201
