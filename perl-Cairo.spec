@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	Cairo
 Summary:	Perl Cairo bindings
-Summary(pl):	Wi±zania Cairo dla Perla
+Summary(pl.UTF-8):   WiÄ…zania Cairo dla Perla
 Name:		perl-Cairo
 Version:	1.021
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module provides perl access to Cairo library.
 
-%description -l pl
-Ten modu³ daje dostêp z poziomu Perla do biblioteki Cairo.
+%description -l pl.UTF-8
+Ten moduÅ‚ daje dostÄ™p z poziomu Perla do biblioteki Cairo.
 
 %prep
 %setup -q -n %{pnam}-%{version}
