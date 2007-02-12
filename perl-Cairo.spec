@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	Cairo
 Summary:	Perl Cairo bindings
-Summary(pl.UTF-8):   Wiązania Cairo dla Perla
+Summary(pl.UTF-8):	Wiązania Cairo dla Perla
 Name:		perl-Cairo
 Version:	1.021
 Release:	1
