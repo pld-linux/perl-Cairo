@@ -7,18 +7,19 @@
 Summary:	Perl Cairo bindings
 Summary(pl.UTF-8):	Wiązania Cairo dla Perla
 Name:		perl-Cairo
-Version:	1.021
+Version:	1.040
 Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	72696240a9ba97694209d0a0c7367b57
+# Source0-md5:	e08cbb18c3508465e8c70c32b7c5abed
 URL:		http://gtk2-perl.sourceforge.net/
-BuildRequires:	cairo-devel >= 1.2.4
+BuildRequires:	cairo-devel >= 1.4.0
 BuildRequires:	perl-ExtUtils-Depends >= 0.201
 BuildRequires:	perl-ExtUtils-PkgConfig >= 1.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	cairo >= 1.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,10 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README TODO
-%{perl_vendorarch}/*.pm
+%{perl_vendorarch}/Cairo.pm
 %dir %{perl_vendorarch}/Cairo
 %{perl_vendorarch}/Cairo/Install
 %dir %{perl_vendorarch}/auto/Cairo
 %attr(755,root,root) %{perl_vendorarch}/auto/Cairo/Cairo.so
 %{perl_vendorarch}/auto/Cairo/Cairo.bs
-%{_mandir}/man3/*
+%{_mandir}/man3/Cairo.3pm*
