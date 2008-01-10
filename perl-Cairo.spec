@@ -39,6 +39,7 @@ Ten moduł daje dostęp z poziomu Perla do biblioteki Cairo.
 	INSTALLDIRS=vendor
 
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
