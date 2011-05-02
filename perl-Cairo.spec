@@ -7,12 +7,12 @@
 Summary:	Perl Cairo bindings
 Summary(pl.UTF-8):	Wiązania Cairo dla Perla
 Name:		perl-Cairo
-Version:	1.061
-Release:	5
+Version:	1.062
+Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://downloads.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	08cd5e847f61858651fc4de769066e88
+# Source0-md5:	655eff93a509c9c1a0a98a82db71c11a
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	cairo-devel >= 1.6.0
 BuildRequires:	perl-ExtUtils-Depends >= 0.201
@@ -20,7 +20,7 @@ BuildRequires:	perl-ExtUtils-PkgConfig >= 1.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Test-Number-Delta
+BuildRequires:	perl-Test-Number-Delta >= 1.0
 %endif
 Requires:	cairo >= 1.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,9 +33,6 @@ Ten moduł daje dostęp z poziomu Perla do biblioteki Cairo.
 
 %prep
 %setup -q -n %{pnam}-%{version}
-
-# fails with current cairo; TODO: recheck when upgrading
-%{__rm} t/CairoSurface.t
 
 %build
 %{__perl} Makefile.PL \
@@ -60,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS README TODO
+%doc NEWS README TODO
 %{perl_vendorarch}/Cairo.pm
 %dir %{perl_vendorarch}/Cairo
 %{perl_vendorarch}/Cairo/Install
