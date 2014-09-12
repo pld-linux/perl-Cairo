@@ -75,7 +75,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/Cairo
 %dir %{perl_vendorarch}/auto/Cairo
 %attr(755,root,root) %{perl_vendorarch}/auto/Cairo/Cairo.so
-%{perl_vendorarch}/auto/Cairo/Cairo.bs
 %{_mandir}/man3/Cairo.3pm*
 
 %files devel
