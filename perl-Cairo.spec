@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pnam	Cairo
 Summary:	Perl Cairo bindings
 Summary(pl.UTF-8):	Wiązania Cairo dla Perla
